@@ -1,0 +1,148 @@
+@import url('reset.css');
+
+body { /*isso foi tranquilo */
+    background-color: black;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #33A8DB;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  
+  p {
+    color: white;
+  }
+  
+  section {
+    margin: 100px auto;
+  }
+
+.banner { /*aqui eu inspecionei no Figma, porém estava fazendo elemento por elemento de acordo com o mockup e não consegui observar os elementos, precisei conferir no CSS da Michele */
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.60) 0%, rgba(49, 168, 221, 0.00) 100%), url('../images/banner.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    height: 600px;
+    padding-top: 60px;
+    border-bottom: 1px solid #33A8DB80;
+}
+
+.banner .banner-content { /*a mesma coisa do .banner */
+    color: white;
+    width: 600px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .banner h1 { /*a parte da estilização da fonte foi bem tranquila, entendo a importância de se converter o tamanho de medida para REM, porém não sei como faz essa conversão ainda, então só copiei os valores. */
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: transparent; /*eu já estudei SEO e aprendi que quanto mais pudermos reduzir o CSS, melhor, então resolvi escrever o H1 todo em maiúsculo para que não houvesse necessidade de utilizar o text-transform. */
+    background: -webkit-linear-gradient(#33A8DB, #1472B7);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  .banner p { /*isso foi tranquilo, com exceção da margin que peguei do código da Michelle. */
+    font-size: 1.25rem;
+    margin: 16px 0 24px;
+  }
+
+  .banner .logo { /*as duas partes de código abaixo eu apenas copiei, porém entendo o que elas fazem, mas não consegui identificar apenas observando o layout no figma. */
+    background-color: rgba(0, 0, 0, .2);
+    height: 260px;
+    width: 260px;
+    margin: auto;
+    border-radius: 50%;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .banner .logo img {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .banner .banner-content button {
+    color: #31A8DD;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 16px 32px; /*eu inspecionei o frame do botão e ia colocar o padding que estava lá que era 19 e 91 pixels, não entendi porque foi 16 e 32. */
+    letter-spacing: 4px; /*Assim como no H1, aqui também não utilizei o text-transform, apenas escrevi tudo em maiúsculo. */
+    background-color: transparent;
+    border-image: linear-gradient(#3BA1CD, #1572B7);
+    border-image-slice: 10;
+    border-radius: 30px;
+  }
+
+  #course-content { /* entendi */
+    width: 800px;
+    text-align: center;
+  }
+
+  #course-content .modules-list { /*inspecionei o elemento e esse foi mais fácil de identificar a margem necessária */
+    margin: 24px 0;
+  }
+
+  #course-content .modules-list .module {
+    color: white;
+    width: 530px; /* não entendi porque reduziu 5px */
+    margin: 0 auto 24px; /* tô começando a entender a questão da margem, porém ainda tenho dificuldade pra distinguir. */
+    border: 1px solid #33A8DB;
+    background-color: #252525;
+    padding: 16px; /*aqui eu vi no Figma que constava os 16px, mas tinha 127 lá também, não entendi porque não colocou*/
+    border-radius: 100px;
+    box-shadow: inset -5px 6px 8px rgba(0, 0, 0, .7);
+  }
+
+  #course-content .modules-list .module span {
+    color: #33A8DB;
+  }
+
+  #transform-world { /* a parte de background eu soube fazer, porém a altura e o padding eu não saberia colocar. */
+    height: 560px;
+    background-size: cover;
+    background-image: url("../images/woman-code.png");
+    background-attachment: fixed;
+    border-top: 1px solid #33A8DB80;
+    border-bottom: 1px solid #33A8DB80;
+    padding: 200px;
+  }
+
+  #transform-world p { /*aqui também removi o text-transform*/
+    font-weight: 900;
+    font-size: 2.5rem;
+    max-width: 250px; /*não entendi o porque dessa linha */
+    text-shadow: 3px 2px #33A8DB;
+  }
+
+  #professional-challenges { /*novamente o problema da largura */
+    text-align: center;
+    width: 800px;
+  }
+
+  #professional-challenges img { /*aqui também */
+    margin: 32px 0;
+  }
+
+  footer {
+    padding: 60px 0; /*não soube observar onde encontrar o padding */
+    text-align: center;
+    background-image: linear-gradient(rgba(50, 168, 219, .0), rgba(50, 168, 219, .2));
+    border-top: 1px solid #33A8DB80;
+  }
+
+  footer .dio-logo {
+    width: 300px;
+  }
+
+  footer a {
+    color: #33A8DB;
+    font-weight: bold;
+    text-decoration: none;
+  }
